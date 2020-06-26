@@ -31,17 +31,17 @@ class _MainViewState extends State<MainView>
     FadeIn(child: Mock2View()),
   ];
 
-  final PageStorageBucket bucket = PageStorageBucket();
-
   bool _handleScrollNotification(ScrollNotification notification) {
     if (notification.depth == 0) {
       if (notification is UserScrollNotification) {
         final userScroll = notification;
         switch (userScroll.direction) {
           case ScrollDirection.forward:
+            print('Forward Scroll');
             _hide.forward();
             break;
           case ScrollDirection.reverse:
+            print('Reverse Scroll');
             _hide.reverse();
             break;
           case ScrollDirection.idle:
@@ -70,8 +70,9 @@ class _MainViewState extends State<MainView>
 
   @override
   Widget build(BuildContext context) {
-    return ViewModelBuilder<MainViewModel>.reactive(
+    return ViewModelBuilder<MainViewModel>.nonReactive(
       builder: (_, model, child) {
+        print('Building Main');
         ResponsiveWidgets.init(
           context,
           height: 812.0,

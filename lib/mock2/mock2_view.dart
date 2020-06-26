@@ -4,6 +4,7 @@ import 'package:stacked_map/common/helper_widgets/ui_helpers.dart';
 class Mock2View extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print('Building Mock 2');
     return ListView.separated(
       itemBuilder: (context, index) => Card(
         child: ListTile(

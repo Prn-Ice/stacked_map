@@ -4,6 +4,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 class MapView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print('Building Map');
     return GoogleMap(
       initialCameraPosition: CameraPosition(
         target: LatLng(
