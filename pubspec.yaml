@@ -35,12 +35,14 @@ dependencies:
   stacked: ^1.6.0
   google_maps_flutter: ^0.5.28+1
   injectable: ^0.4.0+1
+  logger: ^0.9.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   injectable_generator: ^0.4.1
   build_runner:
+  
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
